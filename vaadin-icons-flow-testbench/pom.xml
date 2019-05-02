@@ -10,7 +10,7 @@
         <version>2.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>vaadin-icons-flow-testbench</artifactId>
+    <artifactId>vaadin-icons-testbench</artifactId>
     <packaging>jar</packaging>
 
     <name>Vaadin Icons Testbench API</name>
