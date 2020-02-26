@@ -38,6 +38,12 @@ public class IconIT extends ComponentDemoTest {
     }
 
     @Test
+    public void lumoIcons() {
+        assertIconProperty("calendar-icon", "calendar");
+        assertIconProperty("bell-icon", "bell");
+    }
+
+    @Test
     public void styledIcon() {
         WebElement icon = layout.findElement(By.id("logo-icon"));
         assertIconProperty(icon, "vaadin-h");

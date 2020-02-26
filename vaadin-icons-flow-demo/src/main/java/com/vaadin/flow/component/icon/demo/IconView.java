@@ -18,6 +18,8 @@ package com.vaadin.flow.component.icon.demo;
 import com.vaadin.flow.component.html.Div;
 import com.vaadin.flow.component.html.Label;
 import com.vaadin.flow.component.icon.Icon;
+import com.vaadin.flow.component.icon.IronIcon;
+import com.vaadin.flow.component.icon.LumoIcon;
 import com.vaadin.flow.component.icon.VaadinIcon;
 import com.vaadin.flow.component.orderedlayout.FlexComponent.Alignment;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
@@ -36,6 +38,7 @@ public class IconView extends DemoView {
     @Override
     public void initView() {
         createBasicIconsView();
+        createLumoIconsView();
         createStyledIconView();
         createClickableIconsView();
         createAllIconsView();
@@ -54,6 +57,21 @@ public class IconView extends DemoView {
 
         edit.setId("edit-icon");
         close.setId("close-icon");
+    }
+
+    private void createLumoIconsView() {
+        // begin-source-example
+        // source-example-heading: Lumo icons
+        IronIcon calendar = LumoIcon.CALENDAR.create();
+        IronIcon bell = LumoIcon.BELL.create();
+        // end-source-example
+
+        calendar.getStyle().set("marginRight", "5px");
+        addCard("Two ways to create a new icon",
+                new HorizontalLayout(calendar, bell));
+
+        calendar.setId("calendar-icon");
+        bell.setId("bell-icon");
     }
 
     private void createStyledIconView() {
