@@ -30,7 +30,7 @@ public enum LumoIcon {
     MINUS,
     ORDERED_LIST,
     PHONE,
-    PHOTo,
+    PHOTO,
     PLAY,
     PLUS,
     REDO,
