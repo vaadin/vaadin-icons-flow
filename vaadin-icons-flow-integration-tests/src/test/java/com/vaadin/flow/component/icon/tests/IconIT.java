@@ -39,8 +39,8 @@ public class IconIT extends ComponentDemoTest {
 
     @Test
     public void lumoIcons() {
-        assertIconProperty("calendar-icon", "calendar");
-        assertIconProperty("bell-icon", "bell");
+        assertLumoIconProperty("calendar-icon", "calendar");
+        assertLumoIconProperty("bell-icon", "bell");
     }
 
     @Test
@@ -97,8 +97,16 @@ public class IconIT extends ComponentDemoTest {
         assertIconProperty(layout.findElement(By.id(id)), iconName);
     }
 
+    private void assertLumoIconProperty(String id, String iconName) {
+        assertLumoIconProperty(layout.findElement(By.id(id)), iconName);
+    }
+
     private void assertIconProperty(WebElement icon, String iconName) {
         Assert.assertEquals("vaadin:" + iconName, icon.getAttribute("icon"));
+    }
+
+    private void assertLumoIconProperty(WebElement icon, String iconName) {
+        Assert.assertEquals("lumo:" + iconName, icon.getAttribute("icon"));
     }
 
     private void assertCssValue(WebElement element, String propertyName,
